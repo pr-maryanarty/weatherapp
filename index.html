@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/12e3968979.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="search-tab" id="searchTab">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="city-input"
+                placeholder="enter the city"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <button type="button" class="btn btn-info">Search</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <h1 class="headline-city" id="cityName"></h1>
+      <div class="row">
+        <div class="col-6">
+          <span class="current-weather" id="temperature">21</span
+          ><span class="unitTemp">
+            <a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">F</a>
+          </span>
+          <i class="fa-solid fa-sun current-icon"></i>
+        </div>
+
+        <div class="current-time col-6" id="timeCode">
+          17:00 <br />
+          05.05.2022 <br />
+          Sunday
+        </div>
+      </div>
+
+      <div class="weather-icon">
+        <i class="fa-solid fa-wind"></i>
+        <span id="wind-rate"> 3.8 </span>
+        <i class="fa-solid fa-droplet"> </i>
+        <span id="humidity-rate"> 77 </span>%
+      </div>
+      <hr />
+
+      <div class="row">
+        <div class="col weekdays">
+          <strong> Mon </strong> <br />
+          <p>+ 12 °</p>
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+        <div class="col weekdays">
+          <strong> Tue </strong> <br />
+          <p>+ 12 °</p>
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+        <div class="col weekdays">
+          <strong> Wed </strong> <br />
+          <p>+ 12 °</p>
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+        <div class="col weekdays">
+          <strong> Thu </strong><br />
+          <p>+ 12 °</p>
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+        <div class="col weekdays">
+          <strong> Fri </strong> <br />
+          <p>+ 12 °</p>
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
