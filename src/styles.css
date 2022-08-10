@@ -33,8 +33,7 @@ h2 {
 }
 .current-weather {
   font-size: 60px;
-  padding-right: 5px;
-  padding-left: 8px;
+  margin-bottom: 5px;
 }
 .current-icon {
   font-size: 44px;
@@ -44,8 +43,7 @@ h2 {
 }
 .weather-icon {
   font-size: 28px;
-  padding-left: 15px;
-  margin-bottom: 15px;
+  margin-left: 10px;
 }
 #wind-rate {
   color: #000000;

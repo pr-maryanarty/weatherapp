@@ -9,11 +9,22 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind-rate").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
+  document
+    .querySelector("#weather-icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#weather-icon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 
-function search(inputCity) {
+function search(cityName) {
   let apiKey = `8a1943482a34a88b396522ac81951d3a`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 function findCity(event) {
@@ -24,6 +35,7 @@ function findCity(event) {
 
 let currentCity = document.querySelector("#searchTab");
 currentCity.addEventListener("submit", findCity);
+search("Odesa");
 
 let currentTime = new Date();
 let challenge = document.querySelector("#timeCode");
@@ -83,4 +95,3 @@ fahreinheitLink.addEventListener("click", switchToF);
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", switchToC);
-search("Odesa");
