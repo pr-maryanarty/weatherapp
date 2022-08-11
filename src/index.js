@@ -20,6 +20,7 @@ function displayWeatherCondition(response) {
   document
     .querySelector("#weather-icon")
     .setAttribute("alt", response.data.weather[0].description);
+  celsiusTemp = Math.round(response.data.main.temp);
 }
 
 function search(cityName) {
@@ -78,7 +79,8 @@ console.log(currentClock);
 
 function switchToF(event) {
   event.preventDefault();
-
+  celsiusLink.classList.remove("active");
+  fahreinheitLink.classList.add("active");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
