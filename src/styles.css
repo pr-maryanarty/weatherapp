@@ -74,3 +74,11 @@ h2 {
   font-size: 12px;
   text-align: center;
 }
+
+.current-weather .active {
+  color: #000000;
+  cursor: default;
+}
+.current-weather .active:hover {
+  text-decoration: none;
+}

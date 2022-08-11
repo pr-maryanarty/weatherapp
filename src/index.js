@@ -33,10 +33,6 @@ function findCity(event) {
   search(inputCity);
 }
 
-let currentCity = document.querySelector("#searchTab");
-currentCity.addEventListener("submit", findCity);
-search("Odesa");
-
 let currentTime = new Date();
 let challenge = document.querySelector("#timeCode");
 let months = [
@@ -82,16 +78,28 @@ console.log(currentClock);
 
 function switchToF(event) {
   event.preventDefault();
+
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
 function switchToC(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahreinheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 21;
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
+
+let celsiusTemp = null;
+
+let currentCity = document.querySelector("#searchTab");
+currentCity.addEventListener("submit", findCity);
+
 let fahreinheitLink = document.querySelector("#fahrenheit");
 fahreinheitLink.addEventListener("click", switchToF);
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", switchToC);
+
+search("Odesa");
