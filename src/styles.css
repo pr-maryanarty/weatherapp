@@ -17,7 +17,7 @@ h2 {
 }
 .unitTemp {
   position: relative;
-  top: -23px;
+  top: -13px;
   font-size: 20px;
 }
 .container {
@@ -31,20 +31,23 @@ h2 {
 .search-tab {
   margin-top: 20px;
 }
+
 .current-weather {
+  position: relative;
+  top: 15px;
   font-size: 60px;
-  margin-bottom: 5px;
 }
 .current-icon {
   font-size: 44px;
   color: #000000;
-  margin-left: 14px;
+  margin-left: 10px;
   margin-top: 10px;
 }
 .weather-icon {
   font-size: 28px;
   margin-left: 10px;
 }
+
 #wind-rate {
   color: #000000;
   font-family: "Times New Roman", Times, serif;
@@ -56,6 +59,10 @@ h2 {
   font-family: "Times New Roman", Times, serif;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+#description {
+  margin-left: 10px;
 }
 
 .current-time {
@@ -73,12 +80,20 @@ h2 {
 .link {
   font-size: 12px;
   text-align: center;
+  margin-top: 10px;
 }
 
-.current-weather .active {
+.current-weather {
   color: #000000;
   cursor: default;
 }
-.current-weather .active:hover {
-  text-decoration: none;
+.forecast-column {
+  text-align: center;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+.row {
+  margin-left: 2px;
 }
